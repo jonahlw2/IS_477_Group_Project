@@ -43,4 +43,78 @@ The biggest gaps that we have at the moment is most likely going to be combining
 
 Another possible gap is determining the best way to align the time periods and locations between datasets so that meaningful comparisons can be made. If the time periods aren't exact then we could have issues connecting the two datasets by the correct date as we can see issues formatting that. The same is true for locations, "London" and "WC1/WC2 (Central London)" could be difficult to match up and find out exactly where the datasets overlap.
 
+Timeline
+Week 1
+
+Tasks:
+
+Finalize the research questions and overall scope of the project
+
+Confirm the datasets we will use, including the UK government air quality data and the WHO mortality data
+
+Look for a possible third dataset if we need one to better connect pollution and health outcomes
+
+Download the datasets and organize all project files
+
+Start reviewing the datasets for missing values, duplicate entries, and formatting issues
+
+Begin standardizing dates, pollutant names, and location names
+
+Description:
+During the first week, we will focus on setting up the foundation of the project. This means making sure our research questions are clear, confirming that our datasets are appropriate, and organizing our files so the project is easy to manage. We will also begin the cleaning process early so that we can identify any issues with the data before moving into deeper analysis.
+
+Week 2
+
+Tasks:
+
+Continue cleaning the datasets and documenting any changes we make
+
+Identify the common fields that can be used to connect the datasets
+
+Begin combining the datasets using Python/Pandas or SQL
+
+Check whether the merged data is accurate and useful for answering our research questions
+
+Create any new columns or summary measures needed for later analysis
+
+Description:
+The second week will be focused on preparing the data for analysis. After continuing the cleaning process, we will work on integrating the datasets in a meaningful way. Since the datasets may not match perfectly by date, location, or category, this week will also involve testing different ways to connect them and making sure the combined data is reliable enough to use.
+
+Week 3
+
+Tasks:
+
+Analyze trends in London air quality across 2024
+
+Identify which pollutants appear most frequently or at the highest levels
+
+Compare pollution patterns with the mortality-related data
+
+Begin creating graphs and visualizations to present the results
+
+Review the quality of the final dataset and note any limitations
+
+Description:
+In the third week, we will begin the main analysis of the project. We will look at pollution trends over time, study which pollutants are most important in the dataset, and compare those findings with the health data. We will also begin creating visualizations to make the results easier to understand and to help us see patterns more clearly.
+
+Week 4
+
+Tasks:
+
+Finalize graphs, tables, and other visual outputs
+
+Complete the written analysis and interpretation of results
+
+Organize the full workflow from data collection to final analysis
+
+Make sure the project is reproducible and clearly documented
+
+Prepare the final report and any presentation materials
+
+Description:
+The last week will focus on pulling the full project together. We will finish the analysis, finalize the visuals, and make sure our workflow is organized clearly from beginning to end. We also want to make sure that someone else could understand our process and reproduce our work using the files, code, and documentation we provide.
+
+Responsibilities
+
+Both team members will contribute to all major parts of the project, but each person will take primary responsibility for certain areas. One team member will focus more on the London air quality dataset, including data collection, file organization, and part of the cleaning and analysis. The other team member will focus more on the WHO mortality dataset, metadata, documentation, and checking how well the datasets can be combined. Both team members will work together on integration, interpretation of results, visualization, and the final report.
 
