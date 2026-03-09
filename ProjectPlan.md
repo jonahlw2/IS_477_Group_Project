@@ -44,6 +44,7 @@ The biggest gaps that we have at the moment is most likely going to be combining
 Another possible gap is determining the best way to align the time periods and locations between datasets so that meaningful comparisons can be made. If the time periods aren't exact then we could have issues connecting the two datasets by the correct date as we can see issues formatting that. The same is true for locations, "London" and "WC1/WC2 (Central London)" could be difficult to match up and find out exactly where the datasets overlap.
 
 Timeline
+
 Week 1
 
 Tasks:
