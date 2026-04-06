@@ -3,7 +3,9 @@ Milestone 3:
 Original plan: We originally planned to analyze London air quality data (daily pollutant measurements for 2024) and combine it with a World Health Organization dataset on air pollution-related deaths.
 
 After receiving feedback on this plan we realized that the integration section of this project and this data would be very difficult so we have decided to revisit the datasets that we are going use. Sticking with the theme of UK air quality we have decided to instead use UK government air quality datasets (ENV02) and UK emissions datasets (ENV01) instead of London air quality data. These two new datasets work better than our previous selections because they both deal with air quality at a country level rather than mixing in city level data like our previous plan. We still plan on including the WHO dataset on air pollution deaths but limiting it only to the UK so that it can be aligned with our other datasets. 
+
 Links to the all the datasets:
+
 -	This data set contains data on the concentrations of major air pollutants as measured by the Automatic Urban and Rural Network (AURN)
 https://www.gov.uk/government/statistical-data-sets/env02-air-quality-statistics 
 o	https://assets.publishing.service.gov.uk/media/685bba977d72089d1997609b/PM25_Tables_2024.ods 
@@ -13,6 +15,7 @@ o	https://assets.publishing.service.gov.uk/media/6983269a13622473b51ca9b2/fig03_
 o	https://assets.publishing.service.gov.uk/media/698326c15a7e802e96d343c4/fig04_pm10_key_emission_sources.csv 
 -	The WHO air pollution deaths source
 https://www.who.int/data/gho/data/indicators/indicator-details/GHO/ambient-air-pollution-attributable-deaths
+
 We have also updated our research questions to align more with our new datasets. 
 -	How have PM2.5 concentrations changed over time in the UK?
 -	What is the relationship between total particulate emissions and PM2.5 concentrations?
@@ -21,20 +24,24 @@ Timeline:
 
 1.	Data Collection & Acquisition 
 In our original plan we aimed to collect all the required data but since we are switching datasets, we have to start most of that process over. This includes reading in and then checking the integrity by hashing (with SHA-256) the PM2.5 air quality dataset (ENV02) and the emissions datasets from UK government sources. We plan on documenting all steps and creating a reproduceable way of acquiring the data with the python “requests” library. 
+
 Roles and Completion Estimates: Surya will mainly work on this section and plan to complete it by April 5th. 
 
 2.	Data Cleaning & Integration
 Once the data is collected, we will begin parsing and cleaning the datasets. This includes handling the .ods file format and extracting relevant tables. All datasets will then be merged into a singular data frame with clearly defined variables (year, pollutant concentration, emissions). Then we will look into adding the WHO dataset and joining by year in order to compare the deaths due to air pollution with the amount of air pollution in the UK. This will allow us to start making graphs and other visualizations based on this new integrated data. We will look through the data for missing or inconsistent values and check the quality of the data. 
+
 Roles and Completion Estimates: Jonah will work on this section, and we plan on completing it by April 12th
 
 3.	Data Analysis and Visualization 
 We will then perform data analysis to address our research questions. This includes analyzing long-term trends in PM2.5 concentrations and emissions, as well as examining the relationship between emissions and air quality. We plan on creating visualizations to support the analysis, including a line graph showing emission and pollutants trends over time, a scatter plot illustrating the relationship between emissions and PM2.5 levels, and a bar chart displaying emissions by source. We will also calculate summary statistics and correlations to quantify relationships in the data. 
 After this initial analysis, if we plan to include data about the WHO air pollution deaths and create some graphs such as a comparison bar graph representing the percentage of UK citizens that died due to air pollution compared with the number of pollutants in the air. All of these visualizations and statistics directly tie into our research questions and all interpretations and insights will be documented.
-Add roles and completion estimates: We will both work on this section, taking different graphs each and combining them in the final report. We will work together to find answers to our research questions through these graphs and add them to the report.
+
+Roles and Completion Estimates: We will both work on this section, taking different graphs each and combining them in the final report. We will work together to find answers to our research questions through these graphs and add them to the report.
 We plan on completing this section by April 19th
 
 4.	Reproducibility and Documentation
 After completing the analysis and visualizations we plan on spending time editing our report in order to make sure that someone reading our report will have all the tools necessary in order to reproduce our work.
+
 Roles and Completion Estimates: We both plan on working on this section together, documenting any changes we made and adding them to the report. Then we will check that our processes line up and can be easily reproduced by someone else.
 
 Changes:
