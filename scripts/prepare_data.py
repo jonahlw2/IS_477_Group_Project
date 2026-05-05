@@ -1,12 +1,7 @@
 #!/usr/bin/env python3
 """
 Clean and integrate PM2.5, WHO mortality, and emissions datasets.
-
-This script is designed to be called from Snakemake using explicit input and
-output paths.
 """
-
-from __future__ import annotations
 
 import argparse
 from pathlib import Path
