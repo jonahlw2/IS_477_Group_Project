@@ -1,0 +1,25 @@
+Assuming unrestricted shared filesystem usage.
+host: wirelessprv-10-192-192-251.near.illinois.edu
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Job stats:
+job             count
+------------  -------
+prepare_data        1
+total               1
+
+Select jobs to execute...
+Execute 1 jobs...
+[Tue May  5 16:33:20 2026]
+localrule prepare_data:
+    input: data_final/Table2_1b.csv, data_final/b7450f71-eae9-4c95-98e4-022ddec4a93f.csv, data_final/fig03_particulate_matter_annual_emissions.csv
+    output: final_snake_data/pm25_uk.csv, final_snake_data/who_uk.csv, final_snake_data/emissions.csv, final_snake_data/final_data.csv
+    jobid: 0
+    reason: Missing output files: final_snake_data/who_uk.csv, final_snake_data/pm25_uk.csv, final_snake_data/emissions.csv, final_snake_data/final_data.csv
+    resources: tmpdir=/var/folders/s0/sb498m3j5pq3p85ywy45wdpm0000gn/T
+[Tue May  5 16:33:21 2026]
+Finished jobid: 0 (Rule: prepare_data)
+1 of 1 steps (100%) done
+Complete log(s): /Users/jonahwitte/Desktop/IS_477_Group_Project/.snakemake/log/2026-05-05T163320.098607.snakemake.log
