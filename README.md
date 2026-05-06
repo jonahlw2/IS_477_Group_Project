@@ -225,7 +225,31 @@ The correlation table compares PM2.5 concentration with mortality for each disea
 
 This does not prove that PM2.5 directly caused these deaths. It only shows that some disease categories move more closely with PM2.5 concentration in this annual UK-level dataset.
 
-## Limitations
+## Findings
+
+The analysis shows that particulate matter pollution and air pollution-attributable mortality generally declined in the United Kingdom during the years covered by the cleaned datasets. The PM2.5 concentration data show a clear downward trend from 2009 to 2024. PM2.5 concentration decreased from approximately 12.39 in 2009 to 7.15 in 2024, a decline of about 42.3%. Although there are year-to-year fluctuations, the overall pattern suggests improved PM2.5 air quality over time.
+
+The strongest overlap across the PM2.5 concentration, emissions, and mortality datasets occurs from 2010 to 2019. During this period, all three key measures decreased. Air pollution-attributable mortality declined from 31,805 deaths in 2010 to 22,333 deaths in 2019, a decrease of about 29.8%. PM2.5 emissions declined from about 79.99 thousand tonnes to 65.26 thousand tonnes, a decrease of about 18.4%. PM2.5 concentration declined from about 12.97 to 9.88, a decrease of about 23.8%. These results suggest that reductions in particulate matter pollution occurred at the same time as reductions in estimated air pollution-attributable mortality.
+
+The visualizations support this pattern. The PM2.5 concentration line chart shows a general decline over time, while the mortality and emissions line charts also show downward trends during the overlapping years. The scatter plot comparing PM2.5 emissions and PM2.5 concentration suggests that higher PM2.5 emissions are generally associated with higher PM2.5 concentration. This relationship is also reflected in the correlation value of about 0.95 between PM2.5 concentration and PM2.5 emissions.
+
+The comparison between particulate matter emissions and mortality shows a strong positive relationship. PM2.5 emissions have a correlation of about 0.97 with mortality, while PM10 emissions have a correlation of about 0.87 with mortality. This indicates that PM2.5 emissions follow the mortality trend more closely than PM10 emissions in this dataset. The indexed line chart is especially useful because it puts emissions and mortality on the same relative scale. It shows that PM2.5 emissions, PM10 emissions, and mortality all generally decline after 2010, although the rate of decline differs across the measures.
+
+The disease-specific analysis shows that air pollution-attributable mortality is not evenly distributed across disease categories. Ischaemic heart disease has the highest average mortality, with an average value of about 13,668. Acute lower respiratory infections average about 4,277, stroke about 3,953, chronic obstructive pulmonary disease about 2,934, and trachea, bronchus, and lung cancers about 1,819. Most disease categories decline overall from 2010 to 2019, although some categories show more uneven year-to-year movement.
+
+The correlation between PM2.5 concentration and disease-specific mortality is strongest for trachea, bronchus, and lung cancers at about 0.91, followed by ischaemic heart disease at about 0.86 and stroke at about 0.83. Chronic obstructive pulmonary disease shows a moderate correlation of about 0.63, while acute lower respiratory infections show a weaker correlation of about 0.21.
+
+Overall, the findings show consistent descriptive evidence that particulate matter pollution and air pollution-attributable mortality declined together in the UK. However, the analysis is based on aggregate yearly data, so these results should be interpreted as associations rather than proof that pollution reductions directly caused the observed mortality decreases.
+
+## Future Work
+
+The analysis could be improved by expanding the range of data used. This project focuses mainly on national-level UK data, which is useful for identifying broad trends. However, national averages are not good for impacting real people. Future work could examine regional or local air quality data within the United Kingdom, such as in London or other major cities. This would make it possible to compare areas with higher and lower pollution levels and to investigate whether changes in air pollution and mortality differ by region and make it easier to identify the causes and prevention methods.
+
+Another possible improvement would be to add more health and demographic variables. Air pollution-attributable mortality may be influenced by factors such as age distribution, population size, smoking rates, health care access, income, and urbanization. Future work could incorporate population-adjusted rates rather than only raw mortality values. This would make the analysis more meaningful because the number of deaths can change partly because the population changes. Age-standardized rates would be especially useful because air pollution-related diseases are strongly affected by population aging.
+
+The project could also include more complex models beyond correlation. Our current analysis is mostly descriptive and focuses on trends, correlations, and visual comparisons. These are useful for identifying patterns, but they do not establish causation. Future work could use regression models to test whether PM2.5 concentration or emissions predict mortality after accounting for year, population, or other variables. Time-series methods could also be useful because air pollution exposure and health outcomes may have delayed effects. For example, some diseases may respond to long-term pollution exposure rather than only pollution levels in the same year. If there was a study tracking the health of people living in the UK and their exposure to air pollution as well as any health conditions, this would be a very interesting thing to combine with our current analysis as we could track long term affects of air pollution. 
+
+## Limitations / Challenges
 
 One limitation is the datasets do not have the same year overlap for the measures examined; PM2.5 concentrations are not available over the same time period as the emissions data and mortality data. Thus, in the cleaned dataset the overlap is only for the years 2010 to 2019. Because of this, the analysis comparing mortality data will only include those years for which all of the necessary values are present.
 
@@ -234,3 +258,17 @@ Another limitation is the data has been aggregated to the annual UK level, there
 The analysis also compares indicators to different events; PM2.5 concentrations measure the concentration of PM2.5 in the air, and PM2.5 and PM10 emissions measure the quantity of PM2.5 and PM10 emitted. Although PM2.5 concentrations and PM2.5 and PM10 emissions are related, they are not the same; therefore the results should be viewed as general trends and associations rather than a cause-and-effect relationship.
 
 Overall, the dataset can be used successfully for descriptive trend analysis and comparison, but cannot be used to prove that a specific pollutant caused a change in mortality value.
+
+## References
+
+Department for Environment, Food & Rural Affairs. (2025). *ENV02: Air quality statistics*. GOV.UK. Retrieved from https://www.gov.uk/government/statistical-data-sets/env02-air-quality-statistics
+
+Department for Environment, Food & Rural Affairs. (2026). *Emissions of air pollutants in the UK: Particulate matter (PM10 and PM2.5)*. GOV.UK. Retrieved from https://www.gov.uk/government/statistics/emissions-of-air-pollutants/emissions-of-air-pollutants-in-the-uk-particulate-matter-pm10-and-pm25
+
+World Health Organization. (n.d.). *Air pollution attributable deaths, ambient*. Global Health Observatory. Retrieved from https://www.who.int/data/gho/data/indicators/indicator-details/GHO/ambient-air-pollution-attributable-deaths
+
+Matplotlib Development Team. (n.d.). *Matplotlib: Visualization with Python*. Retrieved from https://matplotlib.org
+
+Snakemake. (n.d.). *Installation*. Snakemake documentation. Retrieved from https://snakemake.readthedocs.io/en/stable/getting_started/installation.html#conda-install
+
+The pandas development team. (2024). *pandas: Powerful Python data analysis toolkit*. Retrieved from https://pandas.pydata.org/
