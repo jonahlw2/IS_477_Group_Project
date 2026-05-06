@@ -67,8 +67,6 @@ The cleaned file includes `year`, `geography`, and `emissions_thousand_tonnes`. 
 
 This dataset is publicly available from a UK government source and does not contain individual-level or private information. The main legal and ethical responsibilities are to cite the source, follow the reuse terms, and avoid overclaiming. Since the data is annual and UK-level, it cannot show individual exposure or local pollution differences.
 
-### PM10 and PM2.5 Yearwise Emissions Dataset
-
 ### Final Integrated Dataset
 
 **Repository location:** data_final/final_data.csv
