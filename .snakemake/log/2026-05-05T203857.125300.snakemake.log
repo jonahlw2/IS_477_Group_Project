@@ -1,0 +1,52 @@
+Assuming unrestricted shared filesystem usage.
+host: Jonahs-MacBook-Pro-235.local
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Job stats:
+job             count
+------------  -------
+prepare_data        1
+total               1
+
+Select jobs to execute...
+Execute 1 jobs...
+[Tue May  5 20:38:57 2026]
+localrule prepare_data:
+    input: data_final/Table2_1b.csv, data_final/b7450f71-eae9-4c95-98e4-022ddec4a93f.csv, data_final/fig03_particulate_matter_annual_emissions.csv
+    output: final_snake_data/pm25_uk.csv, final_snake_data/who_uk.csv, final_snake_data/emissions.csv, final_snake_data/final_data.csv
+    jobid: 0
+    reason: Missing output files: final_snake_data/final_data.csv, final_snake_data/pm25_uk.csv, final_snake_data/emissions.csv, final_snake_data/who_uk.csv
+    resources: tmpdir=/var/folders/s0/sb498m3j5pq3p85ywy45wdpm0000gn/T
+RuleException:
+CalledProcessError in file "/Users/jonahwitte/Desktop/IS_477_Group_Project/Snakefile", line 12:
+Command 'set -euo pipefail;  
+        python scripts/prepare_data.py             --pm25 data_final/Table2_1b.csv             --who data_final/b7450f71-eae9-4c95-98e4-022ddec4a93f.csv             --emissions data_final/fig03_particulate_matter_annual_emissions.csv             --pm25-out final_snake_data/pm25_uk.csv             --who-out final_snake_data/who_uk.csv             --emissions-out final_snake_data/emissions.csv             --final-out final_snake_data/final_data.csv' returned non-zero exit status 1.
+[Tue May  5 20:38:58 2026]
+Error in rule prepare_data:
+    message: None
+    jobid: 0
+    input: data_final/Table2_1b.csv, data_final/b7450f71-eae9-4c95-98e4-022ddec4a93f.csv, data_final/fig03_particulate_matter_annual_emissions.csv
+    output: final_snake_data/pm25_uk.csv, final_snake_data/who_uk.csv, final_snake_data/emissions.csv, final_snake_data/final_data.csv
+    shell:
+        
+        python scripts/prepare_data.py             --pm25 data_final/Table2_1b.csv             --who data_final/b7450f71-eae9-4c95-98e4-022ddec4a93f.csv             --emissions data_final/fig03_particulate_matter_annual_emissions.csv             --pm25-out final_snake_data/pm25_uk.csv             --who-out final_snake_data/who_uk.csv             --emissions-out final_snake_data/emissions.csv             --final-out final_snake_data/final_data.csv
+        
+        (command exited with non-zero exit code)
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look below for error messages
+[Tue May  5 20:38:58 2026]
+Error in rule prepare_data:
+    message: None
+    jobid: 0
+    input: data_final/Table2_1b.csv, data_final/b7450f71-eae9-4c95-98e4-022ddec4a93f.csv, data_final/fig03_particulate_matter_annual_emissions.csv
+    output: final_snake_data/pm25_uk.csv, final_snake_data/who_uk.csv, final_snake_data/emissions.csv, final_snake_data/final_data.csv
+    shell:
+        
+        python scripts/prepare_data.py             --pm25 data_final/Table2_1b.csv             --who data_final/b7450f71-eae9-4c95-98e4-022ddec4a93f.csv             --emissions data_final/fig03_particulate_matter_annual_emissions.csv             --pm25-out final_snake_data/pm25_uk.csv             --who-out final_snake_data/who_uk.csv             --emissions-out final_snake_data/emissions.csv             --final-out final_snake_data/final_data.csv
+        
+        (command exited with non-zero exit code)
+Complete log(s): /Users/jonahwitte/Desktop/IS_477_Group_Project/.snakemake/log/2026-05-05T203857.125300.snakemake.log
+WorkflowError:
+At least one job did not complete successfully.

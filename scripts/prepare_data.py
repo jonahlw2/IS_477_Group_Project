@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """
 Clean and integrate PM2.5, WHO mortality, and emissions datasets.
 """
@@ -16,7 +15,7 @@ def ensure_parent(path: str | Path) -> None:
 def clean_pm25(pm25_path: str | Path) -> pd.DataFrame:
     pm25_df = pd.read_csv(pm25_path, header=2)
 
-    pm25_clean = pm25_df.iloc[2:, [0, 1, 2]].copy()
+    pm25_clean = pm25_df.iloc[0:, [0, 1, 2]].copy()
     pm25_clean.columns = ["year", "site", "pm25_concentration"]
 
     pm25_clean["year"] = pd.to_numeric(pm25_clean["year"], errors="coerce")
